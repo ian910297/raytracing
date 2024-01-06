@@ -94,8 +94,8 @@ double dot_product(const double *v1, const double *v2)
         dp += v1[i] * v2[i];
 #else
 #ifdef OPT001_LOOP_UNROLLING
-    dp = v1[0] * v2[0] *
-         v1[1] * v2[1] *
+    dp = v1[0] * v2[0] +
+         v1[1] * v2[1] +
          v1[2] * v2[2];
 #endif//end OPT001_LOOP_UNROLLING
 #endif//end OPTIMIZE_ENABLE
